@@ -1,0 +1,62 @@
+main#hover {
+    /* Posición y tamaño del contenedor */
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+
+    /* Centrar y ajustar tamaño del contenido (texto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+/* Propiedades comunes de los cuadrados */
+main#hover div {
+    transition: transform 1s;
+    /* display: inline-block; */
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+/* Propiedades especificas de los cuadrados */
+main#hover .rojo {
+    top: 0px;
+    left: 0px;
+    background-color: red;
+    transform-origin: left top;
+}
+
+main#hover .amarillo {
+    top: 0px;
+    left: 100px;
+    background-color: yellow;
+    transform-origin: right top;
+}
+
+main#hover .azul {
+    left: 0px;
+    top: 100px;
+    background-color: blue;
+    transform-origin: left bottom;
+}
+
+main#hover .verde {
+    left: 100px;
+    top: 100px;
+    background-color: green;
+    transform-origin: right bottom;
+}
+
+/* Rotación */
+main#hover:hover .rojo,
+main#hover:hover .verde {
+    transform: rotate(90deg); /* horario */
+}
+
+main#hover:hover .amarillo,
+main#hover:hover .azul {
+    transform: rotate(-90deg); /* antihorario */
+}
